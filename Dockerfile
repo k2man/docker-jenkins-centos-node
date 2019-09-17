@@ -8,4 +8,8 @@ RUN curl -sL https://rpm.nodesource.com/setup_10.x | bash -
 RUN yum install -y nodejs wget
 RUN yum clean all -y
 
+# install Development Tools
+RUN yum group install -y "Development Tools"
+RUN yum clean all -y
+
 WORKDIR /var/jenkins_home
