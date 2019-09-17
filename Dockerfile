@@ -4,7 +4,7 @@ LABEL maintainer="k2mani <k2mani@gmail.com>"
 USER root
 
 # install Node
-RUN curl -sL https://rpm.nodesource.com/setup_9.x | bash -
+RUN curl -sL https://rpm.nodesource.com/setup_10.x | bash -
 RUN yum install -y nodejs wget
 RUN yum clean all -y
 
