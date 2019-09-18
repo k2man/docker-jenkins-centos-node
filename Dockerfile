@@ -9,8 +9,10 @@ RUN yum install -y nodejs wget
 
 # install Development Tools
 RUN yum group install -y "Development Tools"
-
 RUN yum clean all -y
+
+# install Grunt
+RUN npm install -g grunt
 
 USER jenkins
 
