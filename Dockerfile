@@ -12,4 +12,6 @@ RUN yum group install -y "Development Tools"
 
 RUN yum clean all -y
 
+USER jenkins
+
 WORKDIR /var/jenkins_home
