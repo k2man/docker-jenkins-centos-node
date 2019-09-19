@@ -11,8 +11,8 @@ RUN yum install -y nodejs wget
 RUN yum group install -y "Development Tools"
 RUN yum clean all -y
 
-# install Grunt
-RUN npm install -g grunt
+# install Grunt, node-gyp
+RUN npm install -g grunt node-gyp
 
 USER jenkins
 
