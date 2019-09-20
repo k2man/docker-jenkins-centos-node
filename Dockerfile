@@ -3,9 +3,9 @@ LABEL maintainer="k2mani <k2mani@gmail.com>"
 
 USER root
 
-# install Node
+# install Node, wget, docker
 RUN curl -sL https://rpm.nodesource.com/setup_10.x | bash -
-RUN yum install -y nodejs wget
+RUN yum install -y nodejs wget docker
 
 # install Development Tools
 RUN yum group install -y "Development Tools"
