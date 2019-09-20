@@ -5,6 +5,7 @@ USER root
 
 # install Node, wget, docker
 RUN curl -sL https://rpm.nodesource.com/setup_10.x | bash -
+RUN yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 RUN yum install -y nodejs wget docker
 
 # install Development Tools
@@ -13,7 +14,5 @@ RUN yum clean all -y
 
 # install Grunt, node-gyp
 RUN npm install -g grunt node-gyp
-
-USER jenkins
 
 WORKDIR /var/jenkins_home
