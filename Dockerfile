@@ -6,7 +6,7 @@ USER root
 # install Node, wget, docker
 RUN curl -sL https://rpm.nodesource.com/setup_10.x | bash -
 RUN yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-RUN yum install -y nodejs wget docker
+RUN yum install -y nodejs wget docker-ce
 
 # install Development Tools
 RUN yum group install -y "Development Tools"
